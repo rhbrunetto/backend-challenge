@@ -5,6 +5,11 @@
   "options": {
     "validateUpsert": true
   },
+  "hidden": [
+    "id",
+    "orderId",
+    "productId"
+  ],
   "properties": {
     "amount": {
       "type": "number",
@@ -19,11 +24,6 @@
       "required": true
     }
   },
-  "hidden": [
-    "id",
-    "orderId",
-    "productId"
-  ],
   "validations": [],
   "relations": {
     "order": {

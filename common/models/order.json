@@ -5,6 +5,12 @@
   "options": {
     "validateUpsert": true
   },
+  "hidden": [
+    "buyerId"
+  ],
+  "protected": [
+    "created_at"
+  ],
   "properties": {
     "status": {
       "type": "string",
@@ -20,10 +26,6 @@
       "defaultFn": "now"
     }
   },
-  "hidden": ["buyerId"],
-  "protected": [
-    "created_at"
-  ],
   "validations": [],
   "relations": {
     "buyer": {
@@ -34,7 +36,10 @@
     "items": {
       "type": "hasMany",
       "model": "OrderItem",
-      "foreignKey": ""
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": false
+      }
     }
   },
   "acls": [],

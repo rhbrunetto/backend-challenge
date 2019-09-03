@@ -5,6 +5,11 @@
   "options": {
     "validateUpsert": true
   },
+  "protected": [
+    "price",
+    "created_at",
+    "updated_at"
+  ],
   "properties": {
     "sku": {
       "type": "number",
@@ -30,11 +35,6 @@
       "defaultFn": "now"
     }
   },
-  "protected": [
-    "price",
-    "created_at",
-    "updated_at"
-  ],
   "validations": [],
   "relations": {},
   "acls": [],

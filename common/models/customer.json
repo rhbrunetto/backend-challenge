@@ -5,6 +5,11 @@
   "options": {
     "validateUpsert": true
   },
+  "protected": [
+    "username",
+    "created_at",
+    "updated_at"
+  ],
   "properties": {
     "name": {
       "type": "string",
@@ -25,20 +30,12 @@
       "defaultFn": "now"
     }
   },
-  "protected": [
-    "username",
-    "created_at",
-    "updated_at"
-  ],
   "validations": [],
   "relations": {
     "items": {
       "type": "hasMany",
       "model": "Product",
       "foreignKey": "",
-      "options": {
-        "disableInclude": true
-      },
       "through": "Order"
     }
   },

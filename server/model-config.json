@@ -38,11 +38,28 @@
   },
   "Product": {
     "dataSource": "db",
-    "public": true
+    "public": true,
+    "options": {
+      "remoting": {
+        "sharedMethods": {
+          "*": false,
+          "find": true,
+          "create": true
+        }
+      }
+    }
   },
   "Customer": {
     "dataSource": "db",
-    "public": true
+    "public": true,
+    "options": {
+      "remoting": {
+        "sharedMethods": {
+          "*": false,
+          "create": true
+        }
+      }
+    }
   },
   "Order": {
     "dataSource": "db",
