@@ -1,39 +1,39 @@
 {
-  "name": "Order",
+  "name": "OrderItem",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "status": {
-      "type": "string",
+    "amount": {
+      "type": "number",
+      "required": true
+    },
+    "price_unit": {
+      "type": "number",
       "required": true
     },
     "total": {
       "type": "number",
       "required": true
-    },
-    "created_at": {
-      "type": "date",
-      "required": true,
-      "defaultFn": "now"
     }
   },
-  "hidden": ["buyerId"],
-  "protected": [
-    "created_at"
+  "hidden": [
+    "id",
+    "orderId",
+    "productId"
   ],
   "validations": [],
   "relations": {
-    "buyer": {
+    "order": {
       "type": "belongsTo",
-      "model": "Customer",
+      "model": "Order",
       "foreignKey": ""
     },
-    "items": {
-      "type": "hasMany",
-      "model": "OrderItem",
+    "product": {
+      "type": "belongsTo",
+      "model": "Product",
       "foreignKey": ""
     }
   },

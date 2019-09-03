@@ -11,7 +11,7 @@
       "required": true
     },
     "cpf": {
-      "type": "number",
+      "type": "string",
       "required": true
     },
     "created_at": {
@@ -25,6 +25,11 @@
       "defaultFn": "now"
     }
   },
+  "protected": [
+    "username",
+    "created_at",
+    "updated_at"
+  ],
   "validations": [],
   "relations": {
     "items": {

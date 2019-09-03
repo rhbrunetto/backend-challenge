@@ -1,0 +1,16 @@
+[
+  {
+    "amount": 1,
+    "price_unit": 109.90,
+    "total": 109.90,
+    "productId": 1,
+    "orderId": 1
+  },
+  {
+    "amount": 1,
+    "price_unit": 79.90,
+    "total": 79.90,
+    "productId": 2,
+    "orderId": 1
+  }
+]
